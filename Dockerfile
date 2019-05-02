@@ -43,4 +43,7 @@ RUN go get github.com/mailhog/mhsendmail \
 # Apache Extensions
 RUN a2enmod headers rewrite expires deflate
 
+VOLUME /var/www/html
+WORKDIR /var/www/html
+
 CMD ["apache2-foreground"]
